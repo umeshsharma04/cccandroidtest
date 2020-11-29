@@ -1,4 +1,4 @@
-package com.mindorks.example.coroutines.data.local
+package com.example.myapplication.local
 
 import android.content.Context
 import androidx.room.Room
@@ -20,7 +20,7 @@ object DatabaseBuilder {
         Room.databaseBuilder(
             context.applicationContext,
             AppDatabase::class.java,
-            "mindorks-example-coroutines"
+            "cccandroidtest"
         ).build()
 
 }

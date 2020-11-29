@@ -1,21 +1,22 @@
-package com.mindorks.example.coroutines.data.local.dao
+package com.example.myapplication.local.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.mindorks.example.coroutines.data.local.entity.User
+import com.example.myapplication.local.entity.Person
+
 
 @Dao
-interface UserDao {
+interface PersonDao {
 
-    @Query("SELECT * FROM user")
-    suspend fun getAll(): List<User>
+    @Query("SELECT * FROM person")
+    suspend fun getAll(): List<Person>
 
     @Insert
-    suspend fun insertAll(users: List<User>)
+    suspend fun insertAll(users: List<Person>)
 
     @Delete
-    suspend fun delete(user: User)
+    suspend fun delete(user: Person)
 
 }

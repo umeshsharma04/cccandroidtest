@@ -1,11 +1,16 @@
-package com.mindorks.example.coroutines.data.local
+package com.example.myapplication.local
 
-import com.mindorks.example.coroutines.data.local.entity.User
+import com.example.myapplication.local.entity.Estimate
+import com.example.myapplication.local.entity.Person
 
 interface DatabaseHelper {
 
-    suspend fun getUsers(): List<User>
+    suspend fun getPerson(): List<Person>
 
-    suspend fun insertAll(users: List<User>)
+    suspend fun insertAllPersons(users: List<Person>)
+
+    suspend fun getEstimate():List<Estimate>
+    suspend fun insertAllEstimate(estimate: List<Estimate>)
+    suspend fun getEstimateById(id:String):List<Estimate>;
 
 }

@@ -1,13 +1,20 @@
 package com.example.myapplication.model
 
-import java.io.Serializable
-import java.util.*
 
-data class UserModel(
+import com.google.gson.annotations.SerializedName
 
-    var id: Int,
+data class PersonModel(
+
+    @SerializedName("id_person")
+    var id_person:Int,
+    @SerializedName("id")
+    var id: String,
+    @SerializedName("first_name")
     var first_name:String,
+    @SerializedName("last_name")
     var last_name:String,
+    @SerializedName("email")
     var email:String,
+    @SerializedName("phone_number")
     var phone_number:String
-) : Serializable
+)

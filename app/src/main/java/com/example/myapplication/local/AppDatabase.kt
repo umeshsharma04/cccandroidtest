@@ -1,13 +1,15 @@
-package com.mindorks.example.coroutines.data.local
+package com.example.myapplication.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.mindorks.example.coroutines.data.local.dao.UserDao
-import com.mindorks.example.coroutines.data.local.entity.User
+import com.example.myapplication.local.dao.EstimateDao
+import com.example.myapplication.local.dao.PersonDao
+import com.example.myapplication.local.entity.Estimate
+import com.example.myapplication.local.entity.Person
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [Person::class,Estimate::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun userDao(): UserDao
-
+    abstract fun personDao(): PersonDao
+    abstract fun estimateDao() : EstimateDao
 }

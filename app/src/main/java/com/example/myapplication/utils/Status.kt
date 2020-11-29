@@ -1,4 +1,4 @@
-package com.mindorks.example.coroutines.utils
+package com.example.myapplication.utils
 
 enum class Status {
     SUCCESS,

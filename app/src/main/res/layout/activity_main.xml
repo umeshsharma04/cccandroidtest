@@ -6,28 +6,203 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+   <LinearLayout
+       android:layout_margin="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.MyApplication.AppBarOverlay">
+        android:orientation="horizontal">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <ImageView
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <TextView
+                android:id="@+id/company"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-    <include layout="@layout/content_main" />
+            <TextView
+                android:id="@+id/address"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
+        </LinearLayout>
+    </LinearLayout>
+
+       <TextView
+           android:textStyle="bold"
+           android:text="Est. Details"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="#B8B8B8" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:text="Est Number"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/estnumber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:text="Revison Number"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/revision_num"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:layout_marginTop="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:text="Created"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/created"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:text="Created By"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/created_by"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_marginTop="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <LinearLayout
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:text="Requester"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/requester"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_weight=".5"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:text="Contact"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:textSize="20sp"
+                   android:id="@+id/contact"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+   </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
